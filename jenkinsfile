@@ -1,11 +1,12 @@
 pipeline { 
-stages { 
-stage('build') { 
-steps { 
-sh 'hostname; systemctl status jenkins'
-} 
-}
-} 
+  agent any 
+  stages { 
+    stage('build') { 
+        steps { 
+            sh 'hostname; systemctl status jenkins'
+        } 
+      }
+  } 
 }
 
 
